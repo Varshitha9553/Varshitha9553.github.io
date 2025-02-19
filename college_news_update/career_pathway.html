@@ -1,0 +1,390 @@
+<!--CAREER_PATHWAYS PAGE-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements, Scholarships & Internships</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #A2D2FF; /* Pastel Blue */
+            color: #1E3A8A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #4E73DF;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 2em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #3A63A2;
+        }
+
+        .header-tab {
+            background-color: #F5F5DC /*beige for heading tab background*/;
+            border-radius: 15px;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-tab h1 {
+            font-size: 3em;
+            color: #00008B /*dark blue for page heading*/;
+            margin: 0;
+            font-weight: 570;
+        }
+
+        .section {
+            width: 80%;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .section:hover {
+            background-color: #ADD8E6 /*light blue for hover*/;
+        }
+
+        .section h2 {
+          /*tabs heading*/
+            font-size: 2.5em;
+            color: #1E3A8A;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            overflow-y: auto;
+            max-height: 80%;
+        }
+
+        .modal h3 {
+            font-size: 1.8em;
+            color: #1E3A8A;
+            margin: 0 0 20px 0;
+        }
+
+        .entry {
+            background-color: #F1F5F9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .entry p {
+            font-size: 1.1em;
+            color: #334155;
+            margin: 5px 0;
+        }
+
+        .entry .highlight {
+            font-weight: 600;
+            color: #1E40AF;
+        }
+
+        .close-btn {
+          /*closing button after clicking on each tab*/
+            background-color: #4E73DF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5em;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .close-btn:hover {
+            background-color: #3A63A2;
+        }
+
+        /* Overlay for Modal */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="home.html" class="back-btn">Home</a>
+
+
+    <!-- Header Section -->
+    <div class="header-tab">
+        <h1>Placements, Scholarships & Internships</h1>
+    </div>
+
+    <!-- Section Buttons -->
+    <div class="section" data-modal="placements-modal">
+        <h2>Placements</h2>
+    </div>
+    <div class="section" data-modal="scholarships-modal">
+        <h2>Scholarships</h2>
+    </div>
+    <div class="section" data-modal="internships-modal">
+        <h2>Internships</h2>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Modal: Placements -->
+    <div id="placements-modal" class="modal">
+        <h3>Placements</h3>
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Google</p>
+            <p><span class="highlight">Position:</span> Software Engineer, DevOps Engineer</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Amazon</p>
+            <p><span class="highlight">Position:</span> Data Analyst, SDE</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Visa</p>
+            <p><span class="highlight">Position:</span> Application Developer</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Adobe</p>
+            <p><span class="highlight">Position:</span> DevOps Engineer</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Accenture</p>
+            <p><span class="highlight">Position:</span> Full Stack Engineer</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> WallMart</p>
+            <p><span class="highlight">Position:</span> Mobile Developer</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Deshaw</p>
+            <p><span class="highlight">Position:</span> Cloud Engineer</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> Flipkart</p>
+            <p><span class="highlight">Position:</span> Data Analyst</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> TCS</p>
+            <p><span class="highlight">Position:</span> Security Engineer</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Hiring Company:</span> IBM</p>
+            <p><span class="highlight">Position:</span> Tester</p>
+        </div>  
+        <button class="close-btn">Close</button>
+    </div>
+
+    <!-- Modal: Scholarships -->
+    <div id="scholarships-modal" class="modal">
+        <h3>Scholarships</h3>
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> National Merit Scholarship</p>
+            <p><span class="highlight">Amount:</span> Upto 1,00,000 INR</p>
+            <p><span class="highlight">Eligiblility:</span> I / II B.Tech with 75% marks</p>
+            <p><span class="highlight">Category:</span> Academic Excellence</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> Amazon Future Engineer scholorships</p>
+            <p><span class="highlight">Amount:</span> Upto  50,000 INR+ Mentorship</p>
+            <p><span class="highlight">Eligiblility:</span> I/II B.Tech Students with 65% marks+No Backlogs</p>
+            <p><span class="highlight">Category:</span> Academic Excellence</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> Fondation for Excellence</p>
+            <p><span class="highlight">Amount:</span> Upto 50,000 INR</p>
+            <p><span class="highlight">Eligiblility:</span> I / II B.Tech</p>
+            <p><span class="highlight">Category:</span> Academics and reasoning skills</p>
+        </div>
+        
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> Reliance Bright Scholar</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech with 75% Attendance</p>
+            <p><span class="highlight">Amount:</span> Upto 1,00,000 INR</p>
+            <p><span class="highlight">Category:</span> Academics</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> IET India Scholarship</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech Students with Academic Excellence</p>
+            <p><span class="highlight">Amount:</span> Upto 1,00,000 INR</p>
+            <p><span class="highlight">Category:</span> Merit Based</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> Tata Realty Foundation Scholarship</p>
+            <p><span class="highlight">Amount:</span> Upto 100% Tuition Fees</p>
+            <p><span class="highlight">Eligiblility:</span> I / II B.Tech</p>
+            <p><span class="highlight">Category:</span> Merit-cum-need-based </p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> Sitaram Jindal Foundation SCholarship</p>
+            <p><span class="highlight">Amount:</span> Upto 15,000 INR monthly Stipemd</p>
+            <p><span class="highlight">Eligiblility:</span> I B.Tech with 75% attendance</p>
+            <p><span class="highlight">Category:</span> Need-base</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> IDFC First Bank Engineering Scholarship</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech</p>
+            <p><span class="highlight">Amount:</span> Complete tuition Fees + Expenses</p>
+            <p><span class="highlight">Category:</span> Need based</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Scholarship:</span> ONGC Scholarship </p>
+            <p><span class="highlight">Amount:</span> Upto 48,000 INR per annum</p>
+            <p><span class="highlight">Eligiblility:</span> I / II B.Tech with 75% in XII class</p>
+            <p><span class="highlight">Category:</span> Academic Excellence</p>
+        </div>   
+        <button class="close-btn">Close</button>
+    </div>
+
+    <!-- Modal: Internships -->
+    <div id="internships-modal" class="modal">
+        <h3>Internships</h3>
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Google</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech</p>
+            <p><span class="highlight">Role:</span> S.T.E.P. Intern</p>
+            <p><span class="highlight">Duration:</span> 3 months</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Microsoft</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech</p>
+            <p><span class="highlight">Role:</span> UI/UX Designer Intern</p>
+            <p><span class="highlight">Duration:</span> 10 weeks</p>
+        </div>
+
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Amazon</p>
+            <p><span class="highlight">Eligiblility:</span>B.Tech</p>
+            <p><span class="highlight">Role:</span>Software development Engineer Intern</p>
+            <p><span class="highlight">Duration:</span> 12 weeks</p>
+        </div>
+            
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Infosys</p>
+            <p><span class="highlight">Eligiblility:</span> III / IV B.Tech</p>
+            <p><span class="highlight">Role:</span> Intern work on live Projects</p>
+            <p><span class="highlight">Duration:</span> 76 days</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Company:</span>Goldman Sachs</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech</p>
+            <p><span class="highlight">Role:</span> Software Engineer Intern</p>
+            <p><span class="highlight">Duration:</span> 2 months</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Company:</span>IBM</p>
+            <p><span class="highlight">Eligiblility:</span> II / III B.Tech</p>
+            <p><span class="highlight">Role:</span> Full stack development Intern using AI</p>
+            <p><span class="highlight">Duration:</span> 6-12 months</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Reliance Industries</p>
+            <p><span class="highlight">Eligiblility:</span> B.Tech Students</p>
+            <p><span class="highlight">Role:</span> Summer Interns engaging in Challenging Projects</p>
+            <p><span class="highlight">Duration:</span> 2 months</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Igeeks Technologies</p>
+            <p><span class="highlight">Eligiblility:</span> III/IV B.Tech</p>
+            <p><span class="highlight">Role:</span> Interns to work on Data Science and Machine learning Projects</p>
+            <p><span class="highlight">Duration:</span> 3 months</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Company:</span> TCS</p>
+            <p><span class="highlight">Eligiblility:</span> IV B.Tech Students</p>
+            <p><span class="highlight">Role:</span> Web developer Intern</p>
+            <p><span class="highlight">Duration:</span> 8-12 weeks</p>
+        </div>
+        <div class="entry">
+            <p><span class="highlight">Company:</span> Wipro</p>
+            <p><span class="highlight">Eligiblility:</span> B.Tech Students</p>
+            <p><span class="highlight">Role:</span> Software Developer and Tester Intern</p>
+            <p><span class="highlight">Duration:</span> 10-12 weeks</p>
+        </div>     
+        <button class="close-btn">Close</button>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        const modals = document.querySelectorAll('.modal');
+        const overlay = document.querySelector('.overlay');
+        const closeButtons = document.querySelectorAll('.close-btn');
+
+        sections.forEach(section => {
+            section.addEventListener('click', () => {
+                const modalId = section.getAttribute('data-modal');
+                document.getElementById(modalId).style.display = 'block';
+                overlay.style.display = 'block';
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modals.forEach(modal => modal.style.display = 'none');
+                overlay.style.display = 'none';
+            });
+        });
+
+        overlay.addEventListener('click', () => {
+            modals.forEach(modal => modal.style.display = 'none');
+            overlay.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
