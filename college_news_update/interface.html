@@ -1,0 +1,156 @@
+<!--WEBSITE_MAIN_INTERFACE-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Campus Chronicles - Home</title>
+    <style>
+        /* Global Reset and Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial /sans-serif/;
+        }
+
+        /* Body Styling */
+        body {
+            height: 100vh;
+            background-image: url('https://podcast748047708.wordpress.com/wp-content/uploads/2020/08/1596444816362_img-20200301-wa0024-1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Top-left Logo and Translucent Tab */
+        .top-left {
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            background: rgba(192, 192, 192, 0.45); /* Translucent white background */
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-left img {
+            width: 140px;
+            margin-right: 0px;
+            height: auto;
+        }
+
+        .top-left h1 {
+            font-size: 4.2rem;
+            color: #000;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .top-left h2 {
+            font-size: 3.3rem;
+            color: #000;
+            margin-top: px;
+            margin-right: 40px;
+            margin-bottom: -10px;
+        }
+
+        /* Header Styling */
+        .header {
+            margin-top: 100px;
+        }
+
+        .header h1 {
+            margin-top: 75px;
+            margin-bottom: -30px;
+            font-size: 8.5rem;
+            font-weight: 550;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 4rem;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Button Container Styling */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+        }
+
+        /* Button Styling */
+        .tab-button {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 2.3rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-button:hover {
+            background-color: cornflowerblue;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top-left Logo and Website Name -->
+    <div class="top-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFX_FMMQJlNH78PFDfD-bI6TN0KrMDlRs1Gw&s" alt="Logo">
+        <div>
+            <h1>Shri Vishnu Engineering College for Women (Autonomous)</h1>
+            <h2>Vishnupur, Bhimavaram</h2>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Campus Chronicles</h1>
+        <h2>Your Gateway to College Life</h2>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="button-container">
+        <button class="tab-button" onclick="navigateTo('login.html?tab=login')">
+            Login
+        </button>
+        <button class="tab-button" onclick="navigateTo('login.html?tab=register')">
+            Register
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
