@@ -1,0 +1,386 @@
+<!--HALL OF FAME PAGE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame - Career Pathway</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #E1F5FE; /* Pastel Blue Background */
+            color: #263238; /* Dark Grayish Blue for text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        /* Home Button */
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #0288D1; /* Blue */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 2em;
+            font-weight: 550;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .home-btn:hover {
+            background-color: #0277BD;
+            transform: translateY(-2px);
+        }
+
+        main {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header Section */
+        .header-tab {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .header-tab h1 {
+            font-size: 4.5em;
+            color: #191970 /Midnight blue for heading/;
+            margin: 0;
+            font-weight: 580;
+        }
+
+        /* Tab Buttons */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .tabs button {
+            background-color: #0288D1;
+            color: white;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 2.5em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .tabs button:hover,
+        .tabs button.active {
+            background-color: #0277BD;
+            transform: scale(1.1);
+        }
+
+        /* Sections */
+        .partition {
+            display: none;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 40px;
+        }
+
+        .partition.active {
+            display: block;
+        }
+
+        .section {
+            background-color: #B3E5FC; /* Lighter pastel blue */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0288D1;
+            text-align: center;
+        }
+
+        .achievement, .placement {
+            background-color: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /*.achievement:hover, .placement:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }*/
+
+        .achievement img, .placement img {
+            width: 150px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievement-details {
+            flex: 1;
+        }
+
+        .highlight {
+            color: #0288D1;
+            font-weight: bold;
+        }
+
+        
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tabs button {
+                font-size: 2em;
+                padding: 10px 20px;
+            }
+
+            .header-tab h1 {
+                font-size: 2.4em;
+            }
+
+            .achievement, .placement {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .achievement img, .placement img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button 
+    <a href="home.html" class="home-btn" aria-label="Go back to home page">Home</a>
+    <!-- Back Button -->
+    <a href="home.html" class="home-btn">Home</a>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Header Section -->
+        <div class="header-tab">
+            <h1>Hall of Fame</h1>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="achievements">Achievements</button>
+            <button class="tab-btn" data-tab="placements">Placements</button>
+        </div>
+
+        <!-- Achievements Section -->
+        <div id="achievements" class="partition active">
+            <div class="section">
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/09/Rworld-Ranking-for-Best-Campus-1024x724.png" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Ranked in Diamond Band 2024</h3>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/SVECWGreenInstitutionalAward.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Ranked No. 47 Across India in the Green Institutional Ranking</h3>
+                    </div>
+                </div>
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/Outlook2017.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Ranked 92 in India's Top 100 Professional College </h3>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/IIC2022-23-1024x733.webp" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Received a 4-Star rating for Promoting Innovation and Startups </h3>
+                    </div>
+                </div>
+
+                
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/Career360-1024x406.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Ranked as AAA+ by Careers 360 Magazine </h3>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/ARIIA2023Cert-1024x724.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Ranked in Atal Ranking of Institutions on Innovation Achievements(ARIIA) </h3>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/MobileNIRF2022.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Ranked in MHRD - NIRF </h3>
+                    </div>
+                </div>
+
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/APQO2-1024x768.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 Global Performance Excellence Award by APQO </h3>
+                    </div>
+                </div>
+                <div class="achievement">
+                    <img src="https://svecw.edu.in/wp-content/uploads/2024/04/IMC2017.jpg" alt="SVECW">
+                    <div class="achievement-details">
+                        <h3>🏆 IMC Ramkrishna Bajaja National Quality Awards </h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Placements Section -->
+        <div id="placements" class="partition">
+            <div class="section">
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQH7HHvAPloZng/feedshare-shrink_2048_1536/B56ZPnjgIZGsAo-/0/1734756665276?e=1738195200&v=beta&t=KgWybVJy7yinm1XNR9IPlum8yv021_cSnKNwyoPJhEc" alt="Placed at VISA">
+                    <div>
+                        <h3>📌 Placed at VISA Company </h3>
+                        <p><strong>Student Name:</strong> T. Nithya Sri </p>
+                        <p><strong>Role:</strong> Software Developer </p>
+                        <p><strong>Package:</strong> Rs. 31.64 LPA </p>
+                    </div>
+                </div>
+                
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQGcMtNt5VYbZg/feedshare-shrink_800/feedshare-shrink_800/0/1731148830931?e=1738800000&v=beta&t=PnW5yKrJXEbsjjT6tfUdbPjfT5Vu-I_ZL_V0wlnWMkI" alt="Placed at Amazon">
+                    <div>
+                        <h3>📌 Placed at Amazon Company </h3>
+                        <p><strong>Student Name:</strong> G.S.S.Spoorthi </p>
+                        <p><strong>Role:</strong> Software Developer </p>
+                        <p><strong>Package:</strong> Rs. 1,10,000 PM </p>
+                    </div>
+                </div>
+
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQEKDtPczYWRYA/feedshare-shrink_800/feedshare-shrink_800/0/1731037960626?e=1738800000&v=beta&t=RlCVeM9GokFD8AO1zt1-Yi0Ivi13ebjnRESucr2pcz8" alt="Placed at Amazon">
+                    <div>
+                        <h3>📌 Placed at Amazon</h3>
+                        <p><strong>Student Name:</strong> M.Divya Sai Lakshmi </p>
+                        <p><strong>Role:</strong> Software Developer </p>
+                        <p><strong>Package:</strong>Rs. 1,10,000 PM </p>
+                    </div>
+                </div>
+                
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQE6GnUeankoeQ/feedshare-shrink_800/feedshare-shrink_800/0/1733216990036?e=1738800000&v=beta&t=RZHRSd1shwjnFoJCuORPe6JHhzmWubwTOF83Cp1SM4Q" alt="Placed at Amazon">
+                    <div>
+                        <h3>📌 Placed at Amazon Company </h3>
+                        <p><strong>Student Name:</strong> K.Lakshmi Deekshitha </p>
+                        <p><strong>Role:</strong> Software Developer</p>
+                        <p><strong>Package:</strong> Rs. 1,10,000 PM </p>
+                    </div>
+                </div>
+                
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQF3M8xSom5jzg/feedshare-shrink_800/feedshare-shrink_800/0/1733891979912?e=1738800000&v=beta&t=pDicxkITMXc0-czycEO6E77a-esWY_wrN3v6aqy9UAo" alt="Placed at AT & T">
+                    <div>
+                        <h3>📌 Placed at AT & T Company </h3>
+                        <p><strong>Student Name:</strong> J.Mani Meghana </p>
+                        <p><strong>Role:</strong> Web Developer </p>
+                        <p><strong>Package:</strong> Rs. 50,000 PM </p>
+                    </div>
+                </div>
+
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQEGHz8mut6Mxw/feedshare-shrink_800/feedshare-shrink_800/0/1732794494221?e=1738800000&v=beta&t=LctH26g8BccdCukCgi-on81xWPrHCOOdq4-z6rI7Fqw" alt="Placed at Akrivia">
+                    <div>
+                        <h3>📌 Placed at Akrivia Company </h3>
+                        <p><strong>Student Name:</strong> C.Akshaya </p>
+                        <p><strong>Role:</strong> Web Developer</p>
+                        <p><strong>Package:</strong> Rs. 12 LPA </p>
+                    </div>
+                </div>
+                
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQEknAFmyy_vug/feedshare-shrink_800/B56ZP2oA4TGQAk-/0/1735009506224?e=1738800000&v=beta&t=DybtRUw_Zs6CDirp1tcHr4L6o5FJNc9p_UxeAvFZrnU" alt="Placed at Worley">
+                    <div>
+                        <h3>📌 Placed at Worley Company </h3>
+                        <p><strong>Student Name:</strong> S.Pranathi </p>
+                        <p><strong>Role:</strong> Web Developer </p>
+                        <p><strong>Package:</strong> Rs. 5.8 LPA </p>
+                    </div>
+                </div>
+                
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQEknAFmyy_vug/feedshare-shrink_800/B56ZP2oA4TGQAk-/0/1735009506224?e=1738800000&v=beta&t=DybtRUw_Zs6CDirp1tcHr4L6o5FJNc9p_UxeAvFZrnU" alt="Placed at Worley">
+                    <div>
+                        <h3>📌 Placed at Worley</h3>
+                        <p><strong>Student Name:</strong> L.B.K.L.Manikyamba </p>
+                        <p><strong>Role:</strong> Web Developer </p>
+                        <p><strong>Package:</strong> Rs. 5.8 LPM </p>
+                    </div>
+                </div>
+                
+                <div class="placement">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQEuC_vPHzFJwg/feedshare-shrink_800/feedshare-shrink_800/0/1730890185312?e=1738800000&v=beta&t=0FLR-CYAKvX4qqn3Mb9raPg9l-xPT_YUiR2dwd51zn0" alt="Placed at providence">
+                    <div>
+                        <h3>📌 Placed at Providence</h3>
+                        <p><strong>Student Name:</strong> I.Lakshmi Lavanya </p>
+                        <p><strong>Role:</strong> Software Developer </p>
+                        <p><strong>Package:</strong> Rs. 10.5 LPA </p>
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Toggle between achievements and placements
+        const buttons = document.querySelectorAll('.tab-btn');
+        const partitions = document.querySelectorAll('.partition');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                partitions.forEach(partition => partition.classList.remove('active'));
+
+                button.classList.add('active');
+                document.getElementById(button.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
