@@ -1,0 +1,233 @@
+<!--CLUB ACTIVITIES PAGE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic and Club Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #B8D8E6; /* Pastel Blue */
+            color: #1E3A8A; /* Dark Blue for contrast */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #6FAFCE; /* Medium Pastel Blue */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 2em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background-color: #5C99B5; /* Slightly darker pastel blue */
+        }
+
+        .header-tab {
+            background-color: #E7F3F9; /* Lighter Pastel Blue */
+            border-radius: 10px;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header-tab h1 {
+            font-size: 3.5em;
+            color: #1E3A8A;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1E3A8A;
+        }
+
+        .event {
+            background-color: #fff; /* Light Pastel Blue */
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .event img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-details {
+            flex-grow: 1;
+        }
+
+        .event-details h3 {
+            font-size: 2em;
+            margin: 0 0 10px 0;
+            color: #1E3A8A;
+        }
+
+        .event-details p {
+            font-size: 1.5em;
+            margin: 5px 0;
+            color: #334155; /* Soft dark blue-gray */
+        }
+
+        .event-details .highlight {
+            font-weight: 600;
+            color: #1E40AF; /* Accent dark blue */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="home.html" class="back-btn">Home</a>
+
+    <!-- Header Section -->
+    <div class="header-tab">
+        <h1>Club Activities and Events</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+
+        <!-- Event Blocks -->
+        <div class="event">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaiBuHiMi4U8P0TUHiq9xDjJhHyN-KDmTBdccwiOGTAFVvUS30SjeZsoifb2p-Qmp7Oys&usqp=CAU" alt="ISTE Club">
+            <div class="event-details">
+                <h3>Event: Capture the Crown </h3>
+                <p><span class="highlight">Date:</span> 25-01-2025 </p>
+                <p><span class="highlight">Organized by:</span> ISTE Club </p>
+                <p><span class="highlight">Venue:</span> A-113 </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9E6BvO71lRRDUfM4CafT9xvb-vfK9ZZLmmSz26ASLAlXRl8HmklkKw8e-HeE3_3vx-L0&usqp=CAU" alt="Mathletes Club">
+            <div class="event-details">
+                <h3>Event: Math Challenge 2025 </h3>
+                <p><span class="highlight">Date:</span> 12-01-2025 </p>
+                <p><span class="highlight">Organized by:</span> Mathletes Club </p>
+                <p><span class="highlight">Venue:</span> C-108 </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://yt3.googleusercontent.com/oZ4YfTBfIPS0WdOz01eQVIdJW5eWSKQVwBgtLudmk12YuTGGhMqxVqMFX7bK49qnp_tyPgbjAQ=s900-c-k-c0x00ffffff-no-rj" alt="Dance Club">
+            <div class="event-details">
+                <h3>Event: Dancing Gala </h3>
+                <p><span class="highlight">Date:</span> 01-02-2025 </p>
+                <p><span class="highlight">Organized by:</span> Dance Club </p>
+                <p><span class="highlight">Venue:</span> Auditoriam </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://cdn.vectorstock.com/i/500p/90/02/sticker-vinyl-smiley-face-vector-30009002.jpg" alt="Psychology Club">
+            <div class="event-details">
+                <h3>Event: Mind Matters Seminar </h3>
+                <p><span class="highlight">Date:</span> 05-02-2025 </p>
+                <p><span class="highlight">Organized by:</span> Psychology Club </p>
+                <p><span class="highlight">Venue:</span> Lecture Hall 1 </p>
+            </div>
+        </div>
+          <div class="event">
+            <img src="https://img.freepik.com/premium-vector/sport-club-logo-design-heraldic-shield-with-winner-cup-badge-can-be-used-fitness-club-sport-school-vector-illustration-isolated-white-background_178650-15178.jpg?semt=ais_hybrid" alt="Sports Club">
+            <div class="event-details">
+                <h3>Event: Inter-College Sports Meet </h3>
+                <p><span class="highlight">Date:</span> 10-02-2025</p>
+                <p><span class="highlight">Organized by:</span> Sports Club</p>
+                <p><span class="highlight">Venue:</span> College Grounds </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ561TuF3A79CJvPMj7k6_bONrT3rugm1ErgQthuXnsPrb-avduDIDKkC4jTCjvBahV91c&usqp=CAU" alt="Music Club">
+            <div class="event-details">
+                <h3>Event: Melody Night </h3>
+                <p><span class="highlight">Date:</span> 15-02-2025 </p>
+                <p><span class="highlight">Organized by:</span> Music Club</p>
+                <p><span class="highlight">Venue:</span> Open Air Theatre </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://yt3.googleusercontent.com/oZ4YfTBfIPS0WdOz01eQVIdJW5eWSKQVwBgtLudmk12YuTGGhMqxVqMFX7bK49qnp_tyPgbjAQ=s900-c-k-c0x00ffffff-no-rj" alt="Dance Club">
+            <div class="event-details">
+                <h3>Event: Dance Extravaganza </h3>
+                <p><span class="highlight">Date:</span> 20-02-2025</p>
+                <p><span class="highlight">Organized by:</span> Dance Club</p>
+                <p><span class="highlight">Venue:</span> College Auditoriam </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToilBFE7l8iianOcQeHenqBXL84Me9XZbLfWpvKsr4TKg0NS74XkIn36N1qx_5Rb4KIlk&usqp=CAU" alt="Eco Club">
+            <div class="event-details">
+                <h3>Event: Campus Clean-up Drive </h3>
+                <p><span class="highlight">Date:</span> 25-02-2025 </p>
+                <p><span class="highlight">Organized by:</span> Eco Club</p>
+                <p><span class="highlight">Venue:</span> College Campus </p>
+            </div>
+        </div>
+          <div class="event">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9bIlfdOcpkUbY9bWHG4r0D_Nweoh4sSnRVMVrINxiv_hvtk29Glw9AMkxIYgr-XQ7Ldc&usqp=CAU" alt="Toastmasters Event">
+            <div class="event-details">
+                <h3>Event: Toastmasters Club </h3>
+                <p><span class="highlight">Date:</span> 01-03-2025 </p>
+                <p><span class="highlight">Organized by:</span> Toastmasters Club </p>
+                <p><span class="highlight">Venue:</span> Seminar Hall </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaiBuHiMi4U8P0TUHiq9xDjJhHyN-KDmTBdccwiOGTAFVvUS30SjeZsoifb2p-Qmp7Oys&usqp=CAUttps://via.placeholder.com/150" alt="ISTE Club">
+            <div class="event-details">
+                <h3>Event: Point of View Clash </h3>
+                <p><span class="highlight">Date:</span> 22-01-2025</p>
+                <p><span class="highlight">Organized by:</span> ISTE Club</p>
+                <p><span class="highlight">Venue:</span> Open Auditoriam </p>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="https://cdn.vectorstock.com/i/500p/90/02/sticker-vinyl-smiley-face-vector-30009002.jpg" alt="Psychology Club">
+            <div class="event-details">
+                <h3>Event: Hope for life </h3>
+                <p><span class="highlight">Date:</span> 03-01-2025</p>
+                <p><span class="highlight">Organized by:</span> Psychology Club</p>
+                <p><span class="highlight">Venue:</span> Mini Theatre </p>
+            </div>
+        </div>   
+    </div>
+
+</body>
+</html>
