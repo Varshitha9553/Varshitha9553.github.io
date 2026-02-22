@@ -89,7 +89,7 @@ Paste a suspicious message in the app, click **Analyze**, and see if it’s safe
 
 ## 👤 Author
 
-**Janaki Veluri**  
+**Vijjapu Varshitha**  
 Third-year B.Tech student | Python/C/Java enthusiast  
 <!-- Add social or contact links if desired -->
 
@@ -100,5 +100,6 @@ Third-year B.Tech student | Python/C/Java enthusiast
 This project is for educational purposes.
 
 ---
+
 
 Feel free to fork, contribute, or suggest improvements!
